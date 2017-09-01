@@ -107,13 +107,13 @@ commandServer(command) {
       var self = this;
       var embed = Math.floor(Math.random() * 0x999099);
       self.disnode.bot.DeleteMessage(command.msg.channel_id, command.msg.id)
-      if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+      if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
         var uptime = self.disnode.stats.getUptime();
         var servers = Object.keys(self.disnode.bot.guilds).length;
         var channels = Object.keys(self.disnode.bot.channels).length;
         var users = Object.keys(self.disnode.bot.users).length;
         var members = self.disnode.bot.guilds[command.msg.guildID].member_count
-        var ids = self.disnode.botConfig.ownerID
+        var ids = self.disnode.botConfig.ownerid
         self.disnode.bot.SendEmbed(command.msg.channel_id, {
           color: embed,
           thumbnail: {

@@ -4,7 +4,7 @@
     default (command) {
       var self = this;
       var embed = Math.floor(Math.random() * 0x999099);
-      if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+      if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       self.disnode.bot.DeleteMessage(command.msg.channel_id, command.msg.id);
         if (command.params[0] == undefined) {
           self.disnode.bot.SendCompactEmbed(command.msg.channel_id, "<:Police:352748150747955201> Warning.", " No user has been inputed.", embed);

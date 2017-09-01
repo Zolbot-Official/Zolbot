@@ -1,24 +1,27 @@
 {
   "commands": [{
       "cmd": "eval",
-      "desc": "used to evaluate code.",
+      "desc": "*Used to evaluate code.*",
       "run": "commandeval"
     },
     {
       "cmd": "exec",
-      "desc": "kys",
+      "desc": "*Used to execute commands to the console.*",
       "run": "commandexec"
     },
     {
       "cmd": "sysinfo",
+      "desc": "*Displays the CPU and RAM %.*",
       "run": "commandSysinfo"
     },
     {
       "cmd": "uptime",
+      "desc": "*Displays how long the bot has been online.*",
       "run": "commandUptime"
     },
     {
       "cmd": "sg",
+      "desc": "*Sets the (Playing:) status of the bot.*",
       "run": "commandSetGame"
     },
     {
@@ -43,32 +46,32 @@
     },
     {
       "cmd": "purge",
-      "desc": "Deletes the specified number of messages (1-100)",
+      "desc": "*Deletes the specified number of messages (1-100)*",
       "run": "commandDelete"
     },
     {
       "cmd": "yt",
-      "desc": "Displays a link to all of the owners youtubes.",
+      "desc": "*Displays a link to all of the owners youtubes.*",
       "run": "commandYT"
     },
     {
       "cmd": "twitter",
-      "desc": "Displays a link to all of the owners twitters.",
+      "desc": "*Displays a link to all of the owners twitters.*",
       "run": "commandTwitter"
     },
     {
       "cmd": "invite",
-      "desc": "Displays a link to invite Apotheosis to your own server.",
+      "desc": "*Displays a link to invite Apotheosis to your own server.*",
       "run": "commandinvite"
     },
     {
       "cmd": "donate",
-      "desc": "Displays a link to donate to Zolfe.",
+      "desc": "*Displays a link to donate to Zolfe.*",
       "run": "commandDonate"
     },
     {
       "cmd": "url",
-      "desc": "Displays a link to Zolfe's website.",
+      "desc": "*Displays a link to Zolfe's website.*",
       "run": "commandurl"
     }
 

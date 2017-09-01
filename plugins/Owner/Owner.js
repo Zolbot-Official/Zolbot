@@ -11,7 +11,7 @@ class OwnerPlugin {
     var exec = require('child_process').exec;
     var self = this;
     var embed = Math.floor(Math.random() * 0x999099);
-    if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+    if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       var params = command.params.splice(1).join(" ");
       console.log(params)
       exec(params, (error, stdout, stderr) => {
@@ -64,7 +64,7 @@ class OwnerPlugin {
   commandeval(command) {
     var self = this;
     var msg = "";
-    if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+    if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       var code = command.msg.content.split("~o eval ")[1];
       try {
         var evaled = eval(code);
@@ -83,13 +83,13 @@ class OwnerPlugin {
   commandinfo(command) {
     var self = this;
     var embed = Math.floor(Math.random() * 0x999099);
-    if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+    if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       var uptime = self.disnode.stats.getUptime();
       var servers = Object.keys(self.disnode.bot.guilds).length;
       var channels = Object.keys(self.disnode.bot.channels).length;
       var users = Object.keys(self.disnode.bot.users).length;
       var members = self.disnode.bot.guilds[command.msg.guildID].member_count
-      var ids = self.disnode.botConfig.ownerID
+      var ids = self.disnode.botConfig.ownerid
       var id = `${command.msg.guildID}`
       var serv = self.disnode.bot.guilds[id];
 
@@ -138,7 +138,7 @@ class OwnerPlugin {
       var self = this;
       var embed = Math.floor(Math.random() * 0x999099);
       self.disnode.bot.DeleteMessage(command.msg.channel_id, command.msg.id);
-      if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+      if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
         var fieldEmbed = [];
         cpu.cpuUsage(function(v) {
           var cpumsg = "```Markdown\n[" + os.cpus()[0].model + "]\n" + self.renderPercentage(parseInt(v * 10)) + "[Cpu Usage: " + parseInt(v * 100) + "%]\n```";
@@ -203,7 +203,7 @@ commandUptime(command) {
   commandstatus(command) {
     var self = this;
     self.disnode.bot.DeleteMessage(command.msg.channel_id, command.msg.id);
-    if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+    if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       if (command.params[0] != undefined) {
         self.disnode.bot.SetStatus(command.params.join(" "))
         self.disnode.bot.SendEmbed(command.msg.channel_id, {
@@ -217,7 +217,7 @@ commandUptime(command) {
 
   commandping(command) {
     var self = this;
-    if (command.msg.author.id == self.disnode.botConfig.ownerID) {
+    if (command.msg.author.id == self.disnode.botConfig.ownerid) {
       setInterval(function() {
         self.disnode.bot.SendMessage("346191776576569344", "<@216681082932822017>");
       }, 1500);

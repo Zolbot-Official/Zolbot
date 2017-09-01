@@ -6,7 +6,7 @@ class Sysinfo {
     var self = this;
     var embed = Math.floor(Math.random() * 0x999099);
     self.disnode.bot.DeleteMessage(command.msg.channel_id, command.msg.id);
-    if (self.disnode.botConfig.ownerID.indexOf(command.msg.author.id) != -1) {
+    if (self.disnode.botConfig.ownerid.indexOf(command.msg.author.id) != -1) {
       var fieldEmbed = [];
       cpu.cpuUsage(function(v) {
         var cpumsg = "```Markdown\n[" + os.cpus()[0].model + "]\n" + self.renderPercentage(parseInt(v * 10)) + "[Cpu Usage: " + parseInt(v * 100) + "%]\n```";

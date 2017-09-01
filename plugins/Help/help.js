@@ -21,15 +21,15 @@ class helpPlugin {
       fields: [{
         name: "```|=========[ OWNER COMMANDS ]=========|```",
         inline: true,
-        value: msg.slice(0, -545)
+        value: msg.slice(0, -557)
       }, {
         name: "```|=======[ MODERATOR COMMANDS ]=======|```",
         inline: true,
-        value: cmd.slice(124, -292)
+        value: cmd.slice(251, -303)
       }, {
         name: "```|=======[ GENERAL COMMANDS ]=========|```",
         inline: true,
-        value: msg.slice(377)
+        value: msg.slice(507)
       }],
       footer: {},
     });
